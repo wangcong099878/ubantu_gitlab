@@ -1,9 +1,9 @@
 FROM ubuntu:14.04
 MAINTAINER cason "251957448@qq.com"
 
-RUN sudo apt-get install curl openssh-server ca-certificates postfix
+RUN sudo apt-get install curl openssh-server ca-certificates postfix -y
 RUN curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
-RUN sudo apt-get install gitlab-ce
+RUN sudo apt-get install gitlab-ce -y
 RUN sudo gitlab-ctl reconfigure
 
 
